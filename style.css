@@ -1,0 +1,260 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+#cards {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.card-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.status-container {
+  width: 240px;
+  height: 42px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  /* background-color: green; */
+}
+.status-main {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.indicator#white {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background-color: rgba(217, 217, 217, 1);
+}
+.indicator#yellow {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background-color: rgba(163, 163, 0, 1);
+}
+.indicator#green {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background-color: rgba(0, 163, 0, 1);
+}
+.indicator#red {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background-color: rgba(163, 0, 0, 1);
+}
+.card {
+  width: 280px;
+  height: 672px;
+  padding: 20px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 12px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  background-color: rgba(16, 16, 16, 1);
+  border: 1px solid rgba(51, 51, 51, 1);
+}
+.card#todo {
+  border-radius: 12px 0px 0px 0px;
+}
+.card#in-progress {
+  border-radius: 12px 12px 0px 0px;
+}
+.card#done {
+  border-radius: 12px 12px 0px 0px;
+}
+.card#blocked {
+  border-radius: 0px 12px 0px 0px;
+}
+.status-main > p {
+  text-align: left;
+  /* font-family: Inter; */
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+.task {
+  display: flex;
+  justify-content: space-around;
+  margin-right: auto;
+  margin-left: auto;
+  width: 240px;
+  height: 54px;
+  align-items: center;
+  background-color: rgba(26, 26, 26, 1);
+  border-radius: 5px;
+}
+.task > p {
+  font-size: 12px;
+  justify-items: left;
+}
+.task-options {
+  display: flex;
+  gap: 10px;
+  justify-items: right;
+}
+#task-options > .task-option {
+  color: black;
+  text-transform: uppercase;
+}
+.todo-name {
+  width: 150px;
+  height: 54px;
+  word-wrap: break-word;
+  overflow: hidden;
+  align-content: center;
+}
+#add-new-button {
+  background-color: rgba(0, 163, 0, 1);
+  position: fixed;
+  width: 6.8rem;
+  height: 2.7rem;
+  top: 52px;
+  right: 50px;
+  text-align: center;
+  font-size: 12px;
+  align-content: center;
+  border-radius: 5px;
+}
+.add-new-popup {
+  width: 23.125rem;
+  height: 25.5rem;
+  background-color: rgba(30, 30, 30, 1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  justify-items: center;
+  align-content: center;
+  z-index: 2;
+  display: none;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+.delete-popup-little-window {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+#delete-popup {
+  /* display: block; */
+  height: 100px;
+  align-content: center;
+  /* padding: 20px 5px 5px 5px; */
+  padding: 20px 0px;
+}
+.delete-popup-button {
+  width: 140px;
+  height: 2.4rem;
+  background-color: rgba(0, 163, 0, 1);
+  border-radius: 15px;
+}
+.little-window {
+  width: 18.125rem;
+  height: 19rem;
+  position: relative;
+}
+#little-window1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#popup-header {
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* input {
+  background-color: rgba(153, 153, 153, 1);
+} */
+.forms {
+  background-color: rgba(30, 30, 30, 1);
+  /* color: black; */
+  width: 100%;
+  height: 3rem;
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  border: rgba(153, 153, 153, 1) 1px solid;
+}
+#select-status1 {
+  margin-top: 30px;
+}
+#add-new-submit,
+#edit-submit {
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 163, 0, 1);
+}
+#refresh-button {
+  background-color: rgba(0, 163, 0, 1);
+  position: fixed;
+  width: 6.8rem;
+  height: 2.7rem;
+  top: 52px;
+  right: 200px;
+  text-align: center;
+  font-size: 12px;
+  align-content: center;
+  border-radius: 5px;
+}
+#test-button {
+  background-color: rgba(0, 163, 0, 1);
+  position: fixed;
+  width: 6.8rem;
+  height: 2.7rem;
+  top: 52px;
+  right: 350px;
+  text-align: center;
+  font-size: 12px;
+  align-content: center;
+  border-radius: 5px;
+}
+#deleteYes {
+  background-color: rgb(136, 8, 8);
+}
+#deleteNO {
+  background-color: rgb(175, 225, 175);
+  color: black;
+}
+.delete-popup-button {
+  border: none;
+}
+.delete-popup-button:hover {
+  border: black solid 1px;
+}
+
+@media only screen and (max-width = 1000px) {
+  #cards-container {
+    display: block;
+    flex-direction: row;
+  }
+}

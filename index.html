@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="add-new-popup" id="edit-popup">
+      <div class="little-window">
+        <div id="popup-header">
+          <p style="font-size: 24px; font-weight: 700; line-height: 29.05px">
+            Edit task
+          </p>
+          <a class="exit-button" id="exit-edit" href="#">
+            <img src="./close.svg" alt="" style="width: 30px" />
+          </a>
+        </div>
+        <div>
+          <input
+            class="forms"
+            id="select-status2-1"
+            type="text"
+            placeholder="Task Name" />
+          <select class="forms" id="select-status2-2">
+            <option id="" value="" disabled selected hidden>
+              Select status
+            </option>
+            <option id="todo-option" value="todo">Todo</option>
+            <option id="done-option" value="done">Done</option>
+            <option id="in progress" value="in-progress">In Progress</option>
+            <option id="blocked-option" value="blocked">Blocked</option>
+          </select>
+        </div>
+        <button id="edit-submit">Submit</button>
+      </div>
+    </div>
+    <div class="add-new-popup" id="delete-popup">
+      <div id="little-window" class="delete-popup-little-window">
+        <div id="popup-header">
+          <p style="font-size: 18px; font-weight: 400; line-height: 29.05px">
+            ARE YOU SURE?
+          </p>
+          <a class="exit-button" id="exit-delete" href="#">
+            <img src="./close.svg" alt="" style="width: 30px" />
+          </a>
+        </div>
+        <div>
+          <button class="delete-popup-button" id="deleteNO">NO</button>
+          <button class="delete-popup-button" id="deleteYes">YES</button>
+        </div>
+      </div>
+    </div>
+    <div class="add-new-popup" id="add-new-popup">
+      <div class="little-window">
+        <div id="popup-header">
+          <p style="font-size: 24px; font-weight: 700; line-height: 29.05px">
+            Enter task
+          </p>
+          <a class="exit-button" id="exit-add" href="#">
+            <img src="./close.svg" alt="" style="width: 30px" />
+          </a>
+        </div>
+        <div>
+          <input
+            class="forms"
+            id="select-status1"
+            type="text"
+            placeholder="Task Name" />
+          <select class="forms" id="select-status2">
+            <option id="" value="" disabled selected hidden>
+              Select status
+            </option>
+            <option id="todo-option" value="todo">Todo</option>
+            <option id="done-option" value="done">Done</option>
+            <option id="in progress" value="in-progress">In Progress</option>
+            <option id="blocked-option" value="blocked">Blocked</option>
+          </select>
+        </div>
+        <button id="add-new-submit">Submit</button>
+      </div>
+    </div>
+    <div class="cards" id="cards">
+      <div class="card-container" id="cards-container">
+        <div class="card" id="todo">
+          <div class="status-container">
+            <div class="status-main">
+              <div class="indicator" id="white"></div>
+              <p>To do</p>
+            </div>
+          </div>
+          <div class="task-container" id="task-container-todo"></div>
+        </div>
+        <div class="card" id="in-progress">
+          <div class="status-container">
+            <div class="status-main">
+              <div class="indicator" id="yellow"></div>
+              <p>In Progress</p>
+            </div>
+          </div>
+          <div class="task-container" id="task-container-inprogress"></div>
+        </div>
+        <div class="card" id="done">
+          <div class="status-container">
+            <div class="status-main">
+              <div class="indicator" id="green"></div>
+              <p>Done</p>
+            </div>
+          </div>
+          <div class="task-container" id="task-container-done"></div>
+        </div>
+        <div class="card" id="blocked">
+          <div class="status-container">
+            <div class="status-main">
+              <div class="indicator" id="red"></div>
+              <p>Blocked</p>
+            </div>
+          </div>
+          <div class="task-container" id="task-container-blocked"></div>
+        </div>
+      </div>
+      <button id="add-new-button">Add new task</button>
+      <button id="refresh-button">Refresh</button>
+      <button id="test-button" onclick="editTask()">edit task(for test)</button>
+      <div class="add-new-popup" id="add-new-popup"></div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
