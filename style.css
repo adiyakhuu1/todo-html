@@ -175,6 +175,8 @@
   width: 18.125rem;
   height: 19rem;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 #little-window1 {
   display: flex;
